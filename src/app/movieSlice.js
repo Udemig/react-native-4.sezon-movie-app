@@ -4,6 +4,12 @@ const initialState = {
   trending: [],
   upcoming: [],
   topRated: [],
+  movieDetail: {},
+  movieCredits: [],
+  movieSimilar: [],
+  personDetail: {},
+  personCredits: [],
+  searchResults: [],
   loading: false,
   error: false,
 };
@@ -21,6 +27,24 @@ const movieSlice = createSlice({
     setTopRatedState: (state, action) => {
       state.topRated = action.payload;
     },
+    setMovieDetailState: (state, action) => {
+      state.movieDetail = action.payload;
+    },
+    setMovieCreditsState: (state, action) => {
+      state.movieCredits = action.payload;
+    },
+    setSimilarMoviesState: (state, action) => {
+      state.movieSimilar = action.payload;
+    },
+    setPersonDetailState: (state, action) => {
+      state.personDetail = action.payload;
+    },
+    setPersonMovieCreditsState: (state, action) => {
+      state.personCredits = action.payload;
+    },
+    setSearchResultsState: (state, action) => {
+      state.searchResults = action.payload;
+    },
     setLoadingState: (state, action) => {
       state.loading = action.payload;
     },
@@ -34,6 +58,12 @@ export const {
   setTrendingState,
   setUpcomingState,
   setTopRatedState,
+  setMovieDetailState,
+  setMovieCreditsState,
+  setSimilarMoviesState,
+  setPersonDetailState,
+  setPersonMovieCreditsState,
+  setSearchResultsState,
   setLoadingState,
   setErrorState,
 } = movieSlice.actions;
